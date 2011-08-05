@@ -1,0 +1,15 @@
+{	"name": "quotenbot",
+	"version": "0.0.1",
+	"author": "naltatis",
+	"repository": {
+		"type": "git",
+		"url" : "git://github.com/naltatis/quotenbot.git"
+	},
+	"dependencies" : {
+		"apricot": "0.0.5",
+		"coffee-script": "1.1.2"
+	},
+	"engines": {
+	  "node": "0.4"
+	}
+}
