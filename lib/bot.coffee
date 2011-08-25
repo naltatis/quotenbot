@@ -8,12 +8,21 @@ class Bot
       console.log "no odds found fallin back to 2:1"
       return '2:1'
     odds = odd.odds
+    diff = odds.home - odds.guest
     if odds.draw - 1 <= odds.home && odds.draw - 1 <= odds.guest
       return '1:1'
-    else if odds.home < odds.guest
+    else if diff < -4
+      return '3:0'
+    else if diff < -2
+      return '2:0'
+    else if diff < 0
       return '2:1'
-    else
+    else if diff < 1
       return '0:1'
+    else if diff < 3
+      return '0:2'
+    else
+      return '0:3'
       
   _find_odds: (home_id, guest_id) ->
     for odd in @odds

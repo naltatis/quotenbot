@@ -21,6 +21,6 @@ guess = (games, odds) ->
 
 mybet.load (err, odds) ->
   console.log "loaded odds from mybet"
-  openliga.games 2011, 1, (err, games) ->
-    console.log "loaded matches for 1/2011"
+  openliga.games 2011, 4, (err, games) ->
+    console.log "loaded matches for 4/2011"
     guess games, odds
