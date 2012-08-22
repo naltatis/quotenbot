@@ -21,6 +21,9 @@ class MyBet
     'Bayer Leverkusen': '6'
     'FC Bayern München': '40'
     'Borussia Mönchengladbach': '87'
+    'Eintracht Frankfurt': '91'
+    'Greuther Fürth': '115'
+    'Fortuna Düsseldorf': '185'
   constructor: ->
   load: (cb) ->
     self = @
@@ -40,6 +43,8 @@ class MyBet
         home: parseFloat game.find(".home1x2 a").text()
         draw: parseFloat game.find(".draw1x2 a").text()
         guest: parseFloat game.find(".away1x2 a").text()
+    console.error("could not find " + entry.home) unless @teams[entry.home]
+    console.error("could not find " + entry.guest) unless @teams[entry.guest]
     entry.home_id = @teams[entry.home]
     entry.guest_id = @teams[entry.guest]
     entry

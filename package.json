@@ -6,8 +6,8 @@
 		"url" : "git://github.com/naltatis/quotenbot.git"
 	},
 	"dependencies" : {
-		"jsdom": "0.2.1",
-		"restler": "0.2.1"
+		"jsdom": "latest",
+		"restler": "latest"
 	},
 	"engines": {
 	  "node": "0.4"
