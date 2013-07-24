@@ -10,9 +10,8 @@ return console.log 'token argument missing' if not token?
 mybet = new MyBet()
 openliga = new OpenLigaDB()
 botliga = new Botliga token
-
 guess = (games, odds) ->
-  bot = new Bot odds
+  bot = new Bot(odds)
   for game in games
     result = bot.guess game
     console.log "posting result #{result} for #{game.name_team1} vs. #{game.name_team2} (#{game.match_id})"
@@ -21,6 +20,8 @@ guess = (games, odds) ->
 
 mybet.load (err, odds) ->
   console.log "loaded odds from mybet"
-  openliga.games 2012, 7, (err, games) ->
-    console.log "loaded matches"
-    guess games, odds
+  year = 2013
+  openliga.currentGroup (err, group) ->
+    openliga.games year, group, (err, games) ->
+      console.log "loaded matches for #{group}/#{year}"
+      guess games, odds

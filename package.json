@@ -1,15 +1,16 @@
-{	"name": "quotenbot",
-	"version": "0.0.1",
-	"author": "naltatis",
-	"repository": {
-		"type": "git",
-		"url" : "git://github.com/naltatis/quotenbot.git"
-	},
-	"dependencies" : {
-		"jsdom": "latest",
-		"restler": "latest"
-	},
-	"engines": {
-	  "node": "0.4"
-	}
+{
+  "name": "quotenbot",
+  "version": "0.0.1",
+  "author": "naltatis",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/naltatis/quotenbot.git"
+  },
+  "dependencies": {
+    "jsdom": "latest",
+    "restler": "~2.0.1"
+  },
+  "engines": {
+    "node": "0.4"
+  }
 }

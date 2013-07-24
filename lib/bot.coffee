@@ -23,7 +23,7 @@ class Bot
       return '0:2'
     else
       return '0:3'
-      
+
   _find_odds: (home_id, guest_id) ->
     for odd in @odds
       return odd if odd.home_id == home_id && odd.guest_id == guest_id

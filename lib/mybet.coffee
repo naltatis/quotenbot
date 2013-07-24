@@ -24,6 +24,7 @@ class MyBet
     'Eintracht Frankfurt': '91'
     'Greuther Fürth': '115'
     'Fortuna Düsseldorf': '185'
+    'Eintracht Braunschweig': '74'
   constructor: ->
   load: (cb) ->
     self = @
@@ -36,7 +37,7 @@ class MyBet
         data.push entry
       cb err, data
   _entry: (game) ->
-    entry = 
+    entry =
       home: game.find(".home1x2 a").attr("title")
       guest: game.find(".away1x2 a").attr("title")
       odds:
@@ -48,5 +49,5 @@ class MyBet
     entry.home_id = @teams[entry.home]
     entry.guest_id = @teams[entry.guest]
     entry
-    
+
 (exports ? this).MyBet = MyBet
